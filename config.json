@@ -1,0 +1,15 @@
+{
+  "database": {
+    "host": "",
+    "user": "",
+    "password": "",
+    "database": "dth-division2-api"
+  },
+    "api": {
+    "host" : "0.0.0.0",
+    "port" : 204
+  },
+  "rate-limiting" : {
+    "requests_per_minute" : 60
+  }
+}
