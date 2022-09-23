@@ -8,6 +8,9 @@ class ApiConfig:
         self.mysql_user = data['database']['user']
         self.mysql_pass = data['database']['password']
         self.mysql_db = data['database']['database']
+        self.api_host = data['api']['host']
+        self.api_port = data['api']['port']
+        self.rate_limiting = data['rate-limiting']['requests_per_minute']
         f.close()
 
     def mysqlHost(self):
@@ -18,3 +21,9 @@ class ApiConfig:
         return self.mysql_pass
     def mysqlDb(self):
         return self.mysql_db
+    def apiHost(self):
+        return self.api_host
+    def apiPort(self):
+        return self.api_port
+    def rateLimit(self):
+        return self.rate_limiting
