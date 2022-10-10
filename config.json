@@ -3,9 +3,9 @@
     "host": "",
     "user": "",
     "password": "",
-    "database": "dth-division2-api"
+    "database": ""
   },
-    "api": {
+  "api": {
     "host" : "0.0.0.0",
     "port" : 204
   },

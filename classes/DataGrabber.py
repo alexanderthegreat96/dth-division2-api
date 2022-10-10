@@ -31,13 +31,17 @@ class Datagrabber:
                 playerStats = response['data']['segments'][0]['stats']
                 avatarUrl = platformInfo['avatarUrl']
 
-                dataArray['data'] = []
-                dataArray['data'].append({'platformSlug' : platformInfo['platformSlug']})
-                dataArray['data'].append({'platformUserId' : platformInfo['platformUserId']})
-                dataArray['data'].append({'avatarUrl':avatarUrl})
+                data = dict()
+
+                data['platformSlug'] = platformInfo['platformSlug']
+                data['platformUserId'] = platformInfo['platformUserId']
+                data['username'] = platformInfo['platformUserIdentifier']
+                data['avatarUrl'] = avatarUrl
 
                 for i in playerStats:
-                    dataArray['data'].append({i:playerStats[i]})
+                    data[i] = playerStats[i]
+
+                dataArray['data'] = data
 
         else:
             dataArray['error'] = 'Unexpected error. Could not get an input from server.'
@@ -63,13 +67,18 @@ class Datagrabber:
                 playerStats = response['data']['segments'][0]['stats']
                 avatarUrl = platformInfo['avatarUrl']
 
-                dataArray['data'] = []
-                dataArray['data'].append({'platformSlug': platformInfo['platformSlug']})
-                dataArray['data'].append({'platformUserId': platformInfo['platformUserId']})
-                dataArray['data'].append({'avatarUrl': avatarUrl})
+                data = dict()
+
+                data['platformSlug'] = platformInfo['platformSlug']
+                data['platformUserId'] = platformInfo['platformUserId']
+                data['username'] = platformInfo['platformUserIdentifier']
+                data['avatarUrl'] = avatarUrl
+
 
                 for i in playerStats:
-                    dataArray['data'].append({i: playerStats[i]})
+                    data[i] = playerStats[i]
+
+                dataArray['data'] = data
 
         else:
             dataArray['error'] = 'Unexpected error. Could not get an input from server.'
@@ -95,13 +104,17 @@ class Datagrabber:
                 playerStats = response['data']['segments'][0]['stats']
                 avatarUrl = platformInfo['avatarUrl']
 
-                dataArray['data'] = []
-                dataArray['data'].append({'platformSlug': platformInfo['platformSlug']})
-                dataArray['data'].append({'platformUserId': platformInfo['platformUserId']})
-                dataArray['data'].append({'avatarUrl': avatarUrl})
+                data = dict()
+
+                data['platformSlug'] = platformInfo['platformSlug']
+                data['platformUserId'] = platformInfo['platformUserId']
+                data['username'] = platformInfo['platformUserIdentifier']
+                data['avatarUrl'] = avatarUrl
 
                 for i in playerStats:
-                    dataArray['data'].append({i: playerStats[i]})
+                    data[i] = playerStats[i]
+
+                dataArray['data'] = data
 
         else:
             dataArray['error'] = 'Unexpected error. Could not get an input from server.'
