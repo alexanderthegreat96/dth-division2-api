@@ -5,11 +5,18 @@
     "password": "",
     "database": ""
   },
-  "api": {
-    "host" : "0.0.0.0",
-    "port" : 204
+  "dummy-account": {
+    "username": "",
+    "password": ""
   },
-  "rate-limiting" : {
-    "requests_per_minute" : 60
+  "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36",
+  "app-id": "4391c956-8943-48eb-8859-07b0778f47b9",
+  "session-id": "a651a618-bead-4732-b929-4a9488a21d27",
+  "api": {
+    "host": "0.0.0.0",
+    "port": 204
+  },
+  "rate-limiting": {
+    "requests_per_minute": 60
   }
 }
