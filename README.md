@@ -12,8 +12,8 @@ It uses tracker's internal API so no API keys are needed.
 
 ## Installation
 
-Before installing make sure you edit config.json to your liking and then import the .sql file
-
+You may customize the config.json file. By default, you don't have to do anything. Make sure you
+have docker installed. CD into your folder and run the command below.
 ```bash
   docker compose up --build
 ```
@@ -23,24 +23,16 @@ Before installing make sure you edit config.json to your liking and then import 
 ```python
 Username: alexander
 Password: JaRyk3ys4fVZrwHzMAba
-
-More
-credentials
-can
-be
-added
-manually
-inside
-the
-users
-table.
 ```
+
+### Important:
+In order to add more credentials you have to add them manually inside the users table.
 
 ## Usage/Examples
 
 ```javascript
-GET: http://localhost:105/api/help
-    POST: http://localhost:105/api/query-data
+ - GET: http://localhost:105/api/help
+ - POST: http://localhost:105/api/query-data
 ```
 
 ### Call structure
