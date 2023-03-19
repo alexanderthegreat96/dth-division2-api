@@ -16,3 +16,4 @@ pyvirtualdisplay
 undetected-chromedriver
 flask
 flask-limiter
+waitress

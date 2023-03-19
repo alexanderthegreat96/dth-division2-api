@@ -44,14 +44,14 @@ class Datagrabber:
 
                             dataArray['data'] = data
                     except Exception as e:
-                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + e.message
+                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + str(e)
 
                 else:
                     dataArray['error'] = 'Unexpected error. Could not get an input from server.'
             except Exception as e:
-                dataArray['error'] = 'There was a parsing error: ' + e.message
+                dataArray['error'] = 'There was a parsing error: ' + str(e)
         except Exception as e:
-            dataArray['error'] = "There was en error: " + e.message
+            dataArray['error'] = "There was en error: " + str(e)
 
         return dataArray
 
@@ -91,14 +91,14 @@ class Datagrabber:
 
                             dataArray['data'] = data
                     except Exception as e:
-                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + e.message
+                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + str(e)
 
                 else:
                     dataArray['error'] = 'Unexpected error. Could not get an input from server.'
             except Exception as e:
-                dataArray['error'] = 'There was a parsing error: ' + e.message
+                dataArray['error'] = 'There was a parsing error: ' + str(e)
         except Exception as e:
-            dataArray['error'] = "There was en error: " + e.message
+            dataArray['error'] = "There was en error: " + str(e)
 
         return dataArray
 
@@ -137,14 +137,14 @@ class Datagrabber:
 
                             dataArray['data'] = data
                     except Exception as e:
-                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + e.message
+                        dataArray['error'] = 'There was an error. System was unable to parse JSON output. ' + str(e)
 
                 else:
                     dataArray['error'] = 'Unexpected error. Could not get an input from server.'
             except Exception as e:
-                dataArray['error'] = 'There was a parsing error: ' + e.message
+                dataArray['error'] = 'There was a parsing error: ' + str(e)
         except Exception as e:
-            dataArray['error'] = "There was en error: " + e.message
+            dataArray['error'] = "There was en error: " + str(e)
 
         return dataArray
 

@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  div2tracker-api:
+    container_name: "div2tracker-api"
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 105:105
+    command: waitress-serve "--host 0.0.0.0 --port=105 main:app"
+    depends_on:
+      - mysql-tracker-api
+    networks:
+      - div2tracker
+
+  restarter:
+    image: docker:cli
+    volumes: [ "/var/run/docker.sock:/var/run/docker.sock" ]
+    command: [ "/bin/sh", "-c", "while true; do sleep 3600; docker restart divisiontracker-api; done" ]
+    restart: unless-stopped
+
+  mysql-tracker-api:
+    container_name: "mysql-tracker-api"
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dth-api
+      MYSQL_USER: dth-api
+      MYSQL_PASSWORD: dth-api
+    ports:
+      - 4444:3306
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+    networks:
+      - div2tracker
+
+networks:
+    div2tracker:
+        driver: bridge
